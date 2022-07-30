@@ -6,8 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 
 const Login = () => {
+  
   const [show, setShow] = useState(false);
-  const [userName, setUserName] = useState('');
+  const [username, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [userData, setUserData] = useState({});
   const navigate = useNavigate();
@@ -18,23 +19,19 @@ const Login = () => {
     setUserData(userInfo);
   },[])
  
-
   const handleClick =()=>{
     setShow(!show)
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(userData?.username === userName && userData?.password === password){
+    if(userData?.username === username && userData?.password === password){
+      localStorage.setItem('login', [username, password])
       navigate('/dashboard')
     } else{
       alert('check username and password');
     }
-
-    setTimeout(()=>{
-      setPassword('');
-      setUserName('');
-    },1000)
+    
   }
 
   
@@ -50,7 +47,7 @@ const Login = () => {
           <FormLabel htmlFor="username" >Username:</FormLabel>
           <Input type={'text'} 
               name={'username'} 
-              value={userName}
+              value={username}
               placeholder={'Username'}
               onChange={(e)=>setUserName(e.target.value)}
               required autoComplete='off' />

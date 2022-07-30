@@ -1,5 +1,4 @@
-import { Box,  Grid, GridItem, Image, Stack, Text } from "@chakra-ui/react";
-import {Link as Links} from 'react-router-dom';
+import { Box,  Grid, GridItem, Image, Link, Stack } from "@chakra-ui/react";
 import facebook from '../Footer/facebook.svg';
 import instagram from '../Footer/instagram.svg';
 import twitter from '../Footer/twitter.svg';
@@ -24,15 +23,10 @@ const Footer = () => {
         </GridItem>
         <GridItem mx={'auto'} colSpan={{base:2, md:1, xl:1}}  >
           <Stack gap={1} p={5} mx={{base:'auto', md:'16'}}  >
-          <Text color={'white'}  >
-            <Links to={'/register'}>Register</Links>
-            </Text>
-          <Text color={'white'}   >
-            <Links to={'/'}>Home</Links>
-            </Text>
-          <Text color={'white'} >
-            <Links to={'/login'} >Login</Links>
-            </Text>
+          <Link color={'white'}>Terms</Link>
+          <Link color={'white'}>Privacy</Link>
+          <Link color={'white'}>Press</Link>
+          <Link color={'white'}>Blog</Link>
           </Stack>
         </GridItem>
       </Grid>

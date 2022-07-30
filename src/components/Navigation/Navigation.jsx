@@ -1,4 +1,4 @@
-import { Box, Link, Image } from "@chakra-ui/react";
+import { Box, Link, Image, } from "@chakra-ui/react";
 import {NavLink} from 'react-router-dom';
 import logo from '../Navigation/logo.png';
 
@@ -20,31 +20,39 @@ const Navigation = () => {
     <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
       <ul className="navbar-nav  ">
       <li className="nav-item">
-         <strong>
+         
          <NavLink className="nav-link me-5"
          style={({isActive}) => isActive? {color: 'green'}: {color: 'blue'}}
           to={'/'}>
           Home
           </NavLink>
-         </strong>
+         
         </li>
 
         <li className="nav-item">
-         <strong>
+         
          <NavLink className="nav-link me-5" 
          style={({isActive}) => isActive? {color: 'green'}: {color: 'blue'}}
          to={'/register'}>
           Register
           </NavLink>
-         </strong>
+         
         </li>
         <li className="nav-item">
-          <strong>
+          
             <NavLink className="nav-link me-5 "  
             style={({isActive}) => isActive? {color: 'green'}: {color: 'blue'}}
             to={'/login'} >
               Login
-              </NavLink></strong>
+              </NavLink>
+        </li>
+        <li className="nav-item">
+
+              <NavLink className="nav-link me-5 "  
+            style={({isActive}) => isActive? {color: 'green'}: {color: 'blue'}}
+            to={'/dashboard'} >
+              Dashboard
+              </NavLink>
         </li>
       </ul>
     </div>

@@ -1,27 +1,23 @@
 import { Box , Image, Grid, GridItem, Heading, List, ListIcon, ListItem, Text, UnorderedList, Button, Stack} from "@chakra-ui/react";
 import {CheckIcon} from '@chakra-ui/icons'
-// import Navigation from "../Navigation/Navigation";
 import {Link as Links} from 'react-router-dom';
 import techy from '../Home/techy.png';
-// import Footer from "../Footer/Footer";
+
 
 
 const Home = () => {
   return ( 
     <Box bgColor={'#08204f'}>
-      {/* <Navigation /> */}
-      <Box p={10}>
-        <section>
-        <Heading size={{base:'md', md:'lg'}} textTransform={'capitalize'} textColor={'white'} mb={5}>
-        Techaton Community
-        </Heading>
-      <Text textColor={'white'} fontSize={{base:13, md:18}} fontFamily={'sans-serif'} >
-        Techathon Community is a mentorship community that is on a mission to help folks who want to transition into tech with the right resources they need to make the journey smooth and fun.
-      </Text>
-        </section>
+        <Box p={10}>
+          <Heading size={{base:'md', md:'lg'}} textTransform={'capitalize'} textColor={'white'} mb={5}>
+          Techaton Community
+          </Heading>
+        <Text textColor={'white'} fontSize={{base:13, md:18}} fontFamily={'sans-serif'} >
+          Techathon Community is a mentorship community that is on a mission to help folks who want to transition into tech with the right resources they need to make the journey smooth and fun.
+        </Text>
       </Box>
+
       <Box bgColor={'white'} p={4}>
-        <section>
         <Grid templateColumns={'repeat(2, 1fr)'}>
           <GridItem p={5} colSpan={{base:2, md:1}} >
             <Text my={{base:3, md:4}} p={3} fontFamily={'cursive'} textDecoration={'underline'} fontSize={{base:25, md:30}} textAlign={{base:'left', md:'center'}}>
@@ -58,10 +54,9 @@ const Home = () => {
             </Box>
           </GridItem>
         </Grid>
-        </section>
       </Box>
+      
       <Box p={8} pb={10}>
-        <section>
         Get Started
         <Heading mb={5} size={{base:'md', md:'lg'}}  textTransform={'capitalize'} textColor={'white'}>
           Kickstart your web developer carreer
@@ -99,9 +94,7 @@ const Home = () => {
             Get access to VIP events and workshops
           </ListItem>
         </List>
-        </section>
       </Box>
-      {/* <Footer /> */}
     </Box>
    );
 }
